@@ -1,0 +1,347 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Zilla+Slab+Highlight:wght@700&family=Zilla+Slab:wght@400;500;700&display=swap');
+
+:root {
+	--main-bg-color: #181818;
+	--main-bg-color-lighter: #3b3b3b;
+	--main-text-color: #F1F1F1;
+	--primary-color: #89d189;
+	--primary-color-lighter: #a6ffa6;
+	--action-bg: #64AB58;
+	--action-bg-lighter: #76c967;
+	--action-bg-shadow: #437C3A;
+	--link-color: #81b6f7;
+	--link-color-lighter: #bddbff;
+}
+
+/* DEFAULT & RESET STYLES */
+
+html {
+	box-sizing: border-box;
+	height: 100%;
+	font-size: 10px;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+button,
+input,
+select,
+textarea {
+	font-family: inherit;
+	font-size: 100%;
+	box-sizing: inherit;
+	padding: 0;
+	margin: 0;
+}
+
+/* IE shows a scrollbar when there is no need for one */
+textarea {
+	overflow: auto;
+}
+
+table {
+	border-collapse: collapse;
+	table-layout: fixed;
+}
+
+/* GENERAL */
+
+*::selection {
+	background-color: #FFB900;
+	color: #000000;
+}
+
+body {
+	width: 100%;
+	background: var(--main-bg-color);
+	background: linear-gradient(135deg, var(--main-bg-color) 0%, var(--main-bg-color-lighter) 100%);
+	background-attachment: fixed;
+	color: var(--main-text-color);
+	font-family: 'Poppins', sans-serif;
+	font-size: 1.5rem;
+	padding-top: 12.8rem;
+	padding-bottom: 6rem;
+	letter-spacing: 0.8px;
+}
+
+.container {
+	width: 90%;
+	max-width: 90rem;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+}
+
+p {
+	line-height: 2.8rem;
+	margin-bottom: 3.2rem;
+}
+
+h2.content-title {
+	font-size: 4rem;
+	font-weight: 500;
+	margin-bottom: 4rem;
+	color: var(--primary-color);
+}
+
+h3 {
+	font-size: 2.2rem;
+	font-weight: 500;
+	color: var(--primary-color);
+	margin-bottom: 1.6rem;
+}
+
+p + h3 {
+	margin-top: 2.4rem;
+}
+
+h3,
+.main-nav li,
+.content-title {
+	font-family: 'Zilla Slab', serif;
+}
+
+article a {
+	transition: all .1s ease-in-out;
+}
+
+article a:link,
+article a:visited {
+	color: var(--link-color);
+}
+
+article a:hover,
+article a:focus,
+article a:active {
+	color: var(--link-color-lighter);
+}
+
+header.logo-nav {
+	margin-right: 9rem;
+}
+
+.logo-text {
+	font-family: 'Zilla Slab Highlight', cursive;
+	text-align: right;
+	font-size: 4.8rem;
+	letter-spacing: normal;
+	margin-bottom: 4rem;
+	padding-left: 28px;
+	padding-top: 26px;
+	background-image: url("../img/logo-bg.svg");
+	background-repeat: no-repeat;
+	background-size: 11.3rem;
+}
+
+.logo-text a:link,
+.logo-text a:visited {
+	text-decoration: none;
+	color: var(--main-text-color);
+}
+
+.main-nav ul {
+	list-style: none;
+}
+
+.main-nav li {
+	text-align: right;
+	font-size: 2rem;
+	font-weight: 500;
+}
+
+.main-nav li + li {
+	margin-top: 2rem;
+}
+
+.main-nav a:link,
+.main-nav a:visited {
+	text-decoration: none;
+	color: var(--main-text-color);
+}
+
+.main-nav a:hover,
+.main-nav a:active,
+.main-nav a:focus {
+	text-decoration: underline;
+	color: var(--link-color);
+}
+
+.action-button {
+	display: inline-block;
+	margin-top: 4rem;
+	padding: 12px 24px;
+	font-weight: 500;
+	letter-spacing: 0.8px;
+	cursor: pointer;
+	background-color: var(--action-bg);
+	color: var(--main-text-color);
+	border: none;
+	border-radius: 4px;
+	box-shadow: 0 4px var(--action-bg-shadow);
+	transition: all .1s ease-in-out;
+	outline: none;
+	text-align: center;
+}
+
+.action-button:hover,
+.action-button:focus {
+	box-shadow: none;
+	transform: translateY(4px);
+	outline: none;
+}
+
+.action-button:active {
+	background-color: var(--action-bg-lighter);
+	outline: none;
+}
+
+a.back-to-top {
+	display: block;
+	margin-top: 8rem;
+	text-align: center;
+	color: #ADADAD;
+	text-decoration: none;
+}
+
+a.back-to-top:hover {
+	color: #D1D1D1;
+}
+
+img.under-construction {
+	box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+	width: 100%;
+	max-width: 100%;
+	display: block;
+	margin-bottom: 2.4rem;
+}
+
+.social-media-links a:link,
+.social-media-links a:visited {
+	font-size: 4rem;
+	text-decoration: none;
+	color: var(--main-text-color);
+	transition: all .1s ease-in-out;
+}
+
+.social-media-links a:hover,
+.social-media-links a:focus {
+	color: var(--link-color);
+}
+
+.social-icons {
+	display: block;
+	margin-top: 8px;
+}
+.social-icons i {
+	margin-right: 6px;
+}
+
+
+@media (max-width: 730px) {
+	body {
+		padding-top: 6rem;
+	}
+
+	.container {
+		width: 86%;
+		display: block;
+	}
+
+	header.logo-nav {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		margin-right: 0;
+		margin-bottom: 5.6rem;
+	}
+
+	.logo-text {
+		font-size: 3.2rem;
+		background-size: 8rem;
+		padding-left: 20px;
+		padding-top: 20px;
+		margin-bottom: 0;
+	}
+
+	.main-nav ul {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.main-nav li + li {
+		margin-top: 0;
+		margin-left: 2rem;
+	}
+
+	#home-link-container {
+		display: none;
+	}
+
+	h2.content-title {
+		font-size: 3.4rem;
+		margin-bottom: 2.4rem;
+	}
+
+	p {
+		margin-bottom: 1.4rem;
+	}
+
+	.action-button {
+		width: 100%;
+		margin-top: 3.2rem;
+	}
+
+	a.back-to-top {
+		margin-top: 6rem;
+	}
+}
+
+@media (max-width: 460px) {
+
+	body {
+		padding-top: 4rem;
+		font-size: 1.3rem;
+	}
+
+	.container {
+		width: 90%;
+	}
+
+	.logo-text {
+		font-size: 2.5rem;
+		background: none;
+		padding: 0;
+		text-align: left;
+	}
+
+	header.logo-nav {
+		margin-bottom: 4rem;
+	}
+
+	.main-nav li {
+		font-size: 1.8rem;
+	}
+
+	h2.content-title {
+		font-size: 2.6rem;
+	}
+
+	.action-button {
+		margin-top: 2.8rem;
+	}
+}
